@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Menu</title>
+    <link rel="stylesheet" type="text/css" href="admin_styles.css">
+</head>
+<body>
+    <div id="loginContainer" class="container">
+        <h1>Admin Login</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="adminContainer" class="container" style="display: none;">
+        <h1>Welcome, <span id="adminName"></span></h1>
+        <button onclick="showTeamManagement()">Team Management</button>
+        <button onclick="showMapControl()">Map Control</button>
+        <button onclick="showTimeoutSettings()">Timeout Settings</button>
+        <button onclick="showRoundBackups()">Round Backups</button>
+    </div>
+
+    <div id="teamManagement" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('teamManagement')">&times;</span>
+            <h2>Team Management</h2>
+            <label for="team1">Team 1 Name:</label>
+            <input type="text" id="team1">
+            <label for="team2">Team 2 Name:</label>
+            <input type="text" id="team2">
+            <button onclick="saveTeamNames()">Save</button>
+        </div>
+    </div>
+
+    <div id="mapControl" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mapControl')">&times;</span>
+            <h2>Map Control</h2>
+            <button onclick="restartMap()">Restart Map</button>
+            <button onclick="pauseGame()">Pause Game</button>
+        </div>
+    </div>
+
+    <div id="timeoutSettings" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('timeoutSettings')">&times;</span>
+            <h2>Timeout Settings</h2>
+            <label for="team1Timeouts">Team 1 Timeouts:</label>
+            <input type="number" id="team1Timeouts">
+            <label for="team2Timeouts">Team 2 Timeouts:</label>
+            <input type="number" id="team2Timeouts">
+            <label for="timeoutDuration">Timeout Duration (seconds):</label>
+            <input type="number" id="timeoutDuration">
+            <button onclick="saveTimeoutSettings()">Save</button>
+        </div>
+    </div>
+
+    <div id="roundBackups" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('roundBackups')">&times;</span>
+            <h2>Round Backups</h2>
+            <ul id="backupList"></ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>powered by moji.spectre</p>
+        <p>Instagram: <a href="https://www.instagram.com/mojtaba_.rezai" target="_blank">mojtaba_.rezai</a></p>
+    </div>
+
+    <script src="admin_scripts.js"></script>
+</body>
+</html>

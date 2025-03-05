@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Menu</title>
+    <link rel="stylesheet" type="text/css" href="manager_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Manager Menu</h1>
+        <button onclick="showCreateAdmin()">Create Admin</button>
+        <button onclick="showChangeMatchName()">Change Match Name</button>
+        <button onclick="showServerSettings()">Server Settings</button>
+        <button onclick="showMapPickBan()">Map Pick/Ban</button>
+    </div>
+
+    <div id="createAdmin" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('createAdmin')">&times;</span>
+            <h2>Create Admin</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+            <button onclick="createAdmin()">Create</button>
+        </div>
+    </div>
+    
+    <div id="changeMatchName" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('changeMatchName')">&times;</span>
+            <h2>Change Match Name</h2>
+            <label for="matchName">Match Name:</label>
+            <input type="text" id="matchName">
+            <button onclick="changeMatchName()">Change</button>
+        </div>
+    </div>
+
+    <script src="manager_scripts.js"></script>
+</body>
+</html>

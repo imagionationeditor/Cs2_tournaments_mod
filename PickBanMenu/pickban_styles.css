@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.mode-selection button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.map-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.map {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.map img {
+    width: 100%;
+    height: 100px;
+}
+
+.map .name {
+    margin-top: 10px;
+}
+
+.map.selected {
+    border: 2px solid green;
+}
+
+.map.banned {
+    opacity: 0.5;
+}
+
+.map .status {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: red;
+}
+
+.timer {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
