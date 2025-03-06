@@ -134,7 +134,7 @@ This mod is still in the early stages of development and may contain bugs and is
 
 1. Clone the repository to your local machine.
    ```sh
-   git clone <repository-url>
+   git clone <https://github.com/imagionationeditor/Cs2_tournaments_mod>
    ```
 2. Navigate to the directory.
    ```sh
