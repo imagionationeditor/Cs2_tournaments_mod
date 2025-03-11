@@ -3,15 +3,15 @@ function login() {
     var password = document.getElementById('password').value;
 
     // Call the C# method to validate admin
-    callCSharpMethod('AdminMod.ValidateAdmin', username, password, function(isValid, adminName) {
-        if (isValid) {
-            document.getElementById('loginContainer').style.display = 'none';
-            document.getElementById('adminContainer').style.display = 'block';
-            document.getElementById('adminName').innerText = adminName;
-        } else {
-            alert('Invalid username or password');
-        }
-    });
+    callCSharpMethod('AdminMod.ValidateAdmin', username, password, (isValid, adminName) => {
+            if (isValid) {
+                document.getElementById('loginContainer').style.display = 'none';
+                document.getElementById('adminContainer').style.display = 'block';
+                document.getElementById('adminName').innerText = adminName;
+            } else {
+                alert('Invalid username or password');
+            }
+        });
 }
 
 function showTeamManagement() {
